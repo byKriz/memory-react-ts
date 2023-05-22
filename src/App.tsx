@@ -19,7 +19,7 @@ function App() {
       <div className="flex flex-1 flex-col">
         <h1 className="text-3xl font-bold underline">Memory Game</h1>
         {characters.map((char) => (
-          <div className="flex gap-5">
+          <div className="flex gap-5" key={char.id}>
             <div>
             <h3>{char.name}</h3>
               <p className="flex flex-col">
