@@ -10,7 +10,6 @@ function App() {
       .then((response) => response.json())
       .then((data: ApiResult) => {
         setCharacters(data.results);
-        console.log(data.results);
       });
   }, []);
 
@@ -21,7 +20,7 @@ function App() {
         {characters.map((char) => (
           <div className="flex gap-5" key={char.id}>
             <div>
-            <h3>{char.name}</h3>
+              <h3>{char.name}</h3>
               <p className="flex flex-col">
                 <span>Location: {char.location.name}</span>
                 <span>Gender: {char.gender}</span>
